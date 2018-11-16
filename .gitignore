@@ -1,0 +1,12 @@
+# file-based project format:
+*.iws
+*.ipr
+*.iml
+
+# generated folders
+target/
+.idea/
+CosmicUserHome_IS_UNDEFINED/
+
+error.log
+info.log
