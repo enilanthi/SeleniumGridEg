@@ -6,7 +6,7 @@
     <test name = "GUI TEST">
 
         <classes>
-            <class name="com.qa.auto.PracticeTest"></class>
+            <class name="com.qa.auto.PracticeTest2"></class>
         </classes>
     </test>
 </suite>
