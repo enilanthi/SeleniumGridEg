@@ -4,9 +4,10 @@
 <suite name = "Suite">
 
     <test name = "GUI TEST">
-
+        <parameter name="browser" value="firefox"></parameter>
+        <parameter name="node" value="CSLK-AFTDB-82-3"></parameter>
         <classes>
-            <class name="com.qa.auto.PracticeTest2"></class>
+            <class name="com.qa.selenium.test.auto.PracticeTest2"></class>
         </classes>
     </test>
 </suite>

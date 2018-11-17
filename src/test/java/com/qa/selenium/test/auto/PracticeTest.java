@@ -1,19 +1,18 @@
-package com.qa.auto;
+package com.qa.selenium.test.auto;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ISelect;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class PracticeTest {
@@ -24,7 +23,8 @@ public class PracticeTest {
 
     @BeforeClass
     public void initateDriver(){
-        System.setProperty("webdriver.gecko.driver", "D:\\Software\\drivers\\geckodriver.exe");
+        URL driverPath = this.getClass().getClassLoader().getResource("drivers\\geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver", driverPath.getPath());
         driver = new FirefoxDriver();
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
